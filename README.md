@@ -1,65 +1,59 @@
-<!-- unified-readme:start -->
+<!-- jr-brand:start -->
 <div align="center">
-
-# Custom Compliance Scripts
-
-**PowerShell scripts for Microsoft Intune Custom Compliance policies and device configuration checks.**
-
-Assess. Validate. Comply.
-
-[![GitHub stars](https://img.shields.io/github/stars/JayRHa/CustomComplianceScripts?style=for-the-badge&logo=github&color=f4c542)](https://github.com/JayRHa/CustomComplianceScripts/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/JayRHa/CustomComplianceScripts?style=for-the-badge&logo=github&color=4078c0)](https://github.com/JayRHa/CustomComplianceScripts/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/JayRHa/CustomComplianceScripts?style=for-the-badge&logo=github&color=d73a4a)](https://github.com/JayRHa/CustomComplianceScripts/issues)
-[![Contributors](https://img.shields.io/github/contributors/JayRHa/CustomComplianceScripts?style=for-the-badge&logo=github&color=28a745)](https://github.com/JayRHa/CustomComplianceScripts/graphs/contributors)
-
-<p>
-  <a href="https://jannikreinhard.com/">Blog</a> ·
-  <a href="https://www.linkedin.com/in/jannik-r/">LinkedIn</a> ·
-  <a href="https://x.com/jannik_reinhard">X</a>
+  <a href="https://jannikreinhard.com/">
+    <img src="https://raw.githubusercontent.com/JayRHa/.github/main/assets/readme/collection.svg" alt="Jannik Reinhard — AI, Cloud and Endpoint Management" width="100%">
+  </a>
+  <h1>Custom Compliance Scripts</h1>
+  <p><strong>PowerShell scripts for Microsoft Intune Custom Compliance policies and device configuration checks.</strong></p>
+  <p>
+  <a href="https://jannikreinhard.com/"><img src="https://img.shields.io/badge/Website-0A5FC0?style=flat-square&amp;logo=wordpress&amp;logoColor=white" alt="Website"></a>
+  <a href="https://github.com/JayRHa"><img src="https://img.shields.io/badge/GitHub-081427?style=flat-square&amp;logo=github&amp;logoColor=white" alt="GitHub"></a>
+  <a href="https://www.linkedin.com/in/jannik-r/"><img src="https://img.shields.io/badge/LinkedIn-0795FF?style=flat-square&amp;logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a>
+  <a href="https://x.com/jannik_reinhard"><img src="https://img.shields.io/badge/X-081427?style=flat-square&amp;logo=x&amp;logoColor=white" alt="X"></a>
+  <a href="https://www.youtube.com/@ModernDevMgmt/featured"><img src="https://img.shields.io/badge/YouTube-0A5FC0?style=flat-square&amp;logo=youtube&amp;logoColor=white" alt="YouTube"></a>
 </p>
+  <p><sub>Open-Source Collection · PowerShell · Practical by design</sub></p>
+</div>
+<!-- jr-brand:end -->
+
+## Overview
+
+This repository contains Microsoft Intune custom compliance discovery scripts and their matching JSON definitions. Each folder covers one practical Windows compliance check.
+
+## Available Checks
+
+| Check | Purpose |
+| --- | --- |
+| `Check-AvEnabled` | Confirm that antivirus protection is enabled |
+| `Check-FirewallEnabled` | Confirm that Windows Firewall is enabled |
+| `Check-FreeStorage` | Check available storage |
+| `Check-IfAppIsInstalled` | Detect whether a required application is installed |
+| `Check-IfDeviceIsEncrypted` | Check device encryption |
+| `Check-IfDeviceIsUpToDate` | Check the Windows update state |
+| `Check-IfUnathorizedLocalAdmins` | Detect unexpected local administrators |
+
+## Quickstart
+
+1. Open the folder for the check you want to use.
+2. Review and test the PowerShell discovery script on a test device.
+3. In the Microsoft Intune admin center, create a custom compliance policy.
+4. Upload the `.ps1` discovery script and import the matching `.json` definition.
+5. Assign the policy to a test group before a wider rollout.
+
+> **Note:** Always review the expected values in the JSON file. Adjust them to match your own compliance requirements.
+
+## License
+
+This project is available under the terms in [LICENSE](LICENSE).
+
+<!-- jr-brand-footer:start -->
 
 ---
 
-`Endpoint Management` | `PowerShell` | `Public` | `Maintained`
-
+<div align="center">
+  <p><sub>Built and maintained by <a href="https://jannikreinhard.com/">Jannik Reinhard</a> · Microsoft MVP for Security and AI Platform.</sub></p>
+  <p><a href="https://www.buymeacoffee.com/jannikreinf">Support the open-source work</a></p>
+  <p><strong>Stay healthy, Cheers Jannik</strong></p>
 </div>
 
-## What is this?
-
-Custom Compliance Scripts supports Microsoft Intune and endpoint management workflows such as automation, troubleshooting, remediation, deployment, or reporting.
-
-## Project Context
-
-- Use it when Intune work should be scripted, packaged, synchronized, or made easier to repeat.
-- Most workflows start from repository assets, then move through Microsoft Graph, Intune, or device-side execution.
-- This repository is maintained as a practical project and reference asset.
-
-## How It Works
-
-The repository stores scripts or tooling, administrators configure or run them, Intune and Microsoft Graph apply the work, and endpoint results feed back into reports or follow-up actions.
-
-```mermaid
-flowchart LR
-    Repo[Repository assets] --> Admin[Administrator workflow]
-    Admin --> Graph[Microsoft Graph or Intune]
-    Graph --> Device[Managed endpoint]
-    Device --> Result[Detection, remediation, or report]
-    Result --> Review[Review and iterate]
-    Review --> Repo
-```
-
-## Quick Start
-
-1. Review the project context and workflow below.
-2. Clone the repository:
-
-   ```bash
-   git clone https://github.com/JayRHa/CustomComplianceScripts.git
-   ```
-
-3. Continue with the setup, usage, or workflow sections below.
-
----
-<!-- unified-readme:end -->
-
-# CustomComplianceScripts
+<!-- jr-brand-footer:end -->
